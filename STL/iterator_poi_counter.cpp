@@ -1,3 +1,5 @@
+//*演算子で指定するのものはアドレスだけだと思っていたが、イテレーター内のメンバ関数のoperator*で定義されていたら使えるそう
+
 #include <iostream>
 
 class iterator_poi_counter {
