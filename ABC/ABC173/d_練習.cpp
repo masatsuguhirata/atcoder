@@ -14,7 +14,7 @@ int main()
 
 	sort(a.begin(),a.end(),greater<int>());
 
-	//a[i]+a[i-1]+a[i-1]+......
+	//a[i]+a[i-1]+a[i-1]+......の加算をn-1回
 	int sum = 0;
 	int tmp=1;
 	rep(i,n-1){							//n-1加算する

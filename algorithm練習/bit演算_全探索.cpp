@@ -12,8 +12,6 @@ int main() {
     cout << A << " AND " << B << " = " << (A&B) << endl;
     cout << bitset<8>(A) << " AND " << bitset<8>(B) << " = " << bitset<8>(A&B) << endl;
 
-
-
     int n = 3;
 
     // {0, 1, ..., n-1} の部分集合の全探索
