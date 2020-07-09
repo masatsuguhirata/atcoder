@@ -5,13 +5,9 @@ using ll = long long;
 using P = pair<int, int>;
 
 int main() {
-	int h,w;
-	cin >> h >> w;
+	int h;
+	cin >> h;
 
-	vector<string> str;
-	rep(i,h) cin >> str(i);
-
-	//隣接するマスに#があればOKを全探索
-	
-
+	srand(time(NULL));
+	rep(i,h) cout << rand() << endl;
 }

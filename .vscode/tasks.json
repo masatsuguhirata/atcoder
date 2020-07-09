@@ -1,0 +1,34 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "options": {
+                "shell": {
+                    "executable": "C:\\Windows\\System32\\wsl.exe",
+                }
+            },
+            "command": "g++",
+            "args": [
+                "-std=gnu++1y",
+                "-g",
+                "-O0",
+                "-I/opt/boost/gcc/include",
+                "-L/opt/boost/gcc/lib",
+                "-o",
+                "`wslpath",
+                //"'${fileDirname}\\problem.exe'`",//https://qiita.com/2019Shun/items/5ab290a4117a00e373b6#%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89
+                "'${workspaceFolder}\\problem.exe'`",
+                "`wslpath",
+                "'${file}'`",
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+			".*lintrc": "json",
+			"ostream": "cpp",
+			"queue": "cpp"
+		}
+}
