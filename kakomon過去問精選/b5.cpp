@@ -1,48 +1,48 @@
+//https://atcoder.jp/contests/abc083/tasks/abc083_b
+
 #include <bits/stdc++.h>
 #define rep(i, n) for (int i = 0; i < (n); ++i)
+#define rep1(i, n) for (int i = 1; i <= (n); ++i)
 using namespace std;
 using ll = long long;
 using P = pair<int, int>;
 
-//#include <iostream>
-//#include <string>
-//using namespace std;
+//int sumdigits(int n)
+//{
+//	if (n < 10)
+//		return n;
+//	return sumDigits(n / 10) + n % 10;
+//}
 
-int sumDigits(int n)
+int sumOfDigits(int num)
 {
-	if (n < 10)
-		return n;
-	return sumDigits(n / 10) + n % 10;
+	int sum = 0;
+
+	while (num > 0)
+	{
+		sum += num % 10;
+		num = num / 10;
+	}
+	return sum;
 }
 
 int main()
 {
-	int n, a, b;
-	int sum;
-	int cnt = 0;
-
+	int n;
+	int a, b;
 	cin >> n >> a >> b;
 
-	for (int i = 0; i <= n; i++)
+	int sum = 0;
+	int tmp;
+	rep1(i, n)
 	{
-		sum = sumDigits(i);
-		if (sum <= b && sum >= a)
+		tmp = sumOfDigits(i);
+		//cout << "i: " << i << "	,tmp: " << tmp << endl;
+		if (tmp >= a && tmp <= b)
 		{
-			cnt++;
-			//cout << i << endl;
+			sum += i;
 		}
 	}
 
-	cout << cnt << endl;
+	cout << sum << endl;
 }
-
-//==テキスト入力系
-//コード整形	：	Shift + alt + f
-//vim矩形操作	：	Ctrl+V,I,A
-
-//==テキスト操作系
-
-//==VScode
-//コンパイル	：	Ctrl+Shift+B
-//ターミナル	：	Ctrl+Shift+@
-//インライン	：	Ctrl+Shift+p

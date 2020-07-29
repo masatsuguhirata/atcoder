@@ -1,30 +1,22 @@
-#include <iostream>
-#include <string>
+//https://atcoder.jp/contests/abc087/tasks/abc087_b
+#include <bits/stdc++.h>
+#define rep(i, n) for (int i = 0; i < (n); ++i)
 using namespace std;
+using ll = long long;
+using P = pair<int, int>;
 
-int main()
-{
-	int A, B, C;
-	int money;
-	int X;
-	int cnt = 0;
+int main() {
+	int a,b,c;
+	int x;
 
-	cin >> A >> B >> C >> X;
+	cin >> a >> b >> c >> x;
 
-	for (int i = 0; i <= A; i++)
-	{
-		for (int j = 0; j <= B; j++)
-		{
-			for (int k = 0; k <= C; k++)
-			{
-				money = 500 * i + 100 * j + 50 * k;
-				if (X == money)
-				{
-					cnt++;
-				}
+	int cnt=0;
+	rep(i,a)
+		rep(i,b)
+			rep(i,c){
+				if(x==a*500+b*100+c*50) cnt++;
 			}
-		}
-	}
 
 	cout << cnt << endl;
 }

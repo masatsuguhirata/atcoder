@@ -19,13 +19,13 @@ public:
 	//--- 論理否定演算子! ---//
 	bool operator!() const { return cnt == 0; }
 
-	//--- 前置増分演算子++ ---//
+	//--- 前置増分演算子++ ---// // 前置の返り値はポインタ
 	Counter& operator++() {
 		if (cnt < UINT_MAX) cnt++;		// カウンタの上限はUINT_MAX
 		return *this;					// 自分自身への参照を返却
 	}
 
-	//--- 後置増分演算子++ ---//
+	//--- 後置増分演算子++ ---// //後置の返り血は、クラス
 	Counter operator++(int) {
 		Counter x = *this;				// インクリメント前の値を保存
 		if (cnt < UINT_MAX) cnt++;		// カウンタの上限はUINT_MAX
