@@ -17,10 +17,11 @@ int main() {
 	cin >> n;
 
 	int tmp;
-  std::vector<int> vec;
+  std::vector<int> vec(n);
 	rep(i,n) {
-		cin >> tmp;
-		vec.push_back(tmp);
+		cin >> vec[i];
+		//cin >> tmp;
+		//vec.push_back(tmp);
 	}
   std::sort(vec.begin(), vec.end());
 
