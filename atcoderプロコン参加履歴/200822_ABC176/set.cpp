@@ -35,10 +35,15 @@ int main() {
 	 		//cout << typename_of< boost::type<int > >() << endl;
  			//cout << typename_of< boost::type<int&> >() << endl;
 
+    if (itr2 == Set.end()) cout << "End" << endl;
+    else cout << (*itr2) << endl;
 
     // 例 2: a[1],a[2],...,a[N] を小さい順に出力する（同じ要素が複数ある場合 1 回だけ出力する）
     set<int> b;
 		int N=10, a[10]={10,20,3,4,5,6,7,8,9,10};
+    //set<int> b; int N, a[10];
+    //cin >> N;
+    //for (int i = 1; i <= N; i++) cin >> a[i];//ただの配列
 
 	  for (int i = 0; i < N; i++) b.insert(a[i]);//setだと、大きい順にならんでいるようにみえる。
     auto itr = b.begin();
@@ -46,8 +51,5 @@ int main() {
         cout << (*itr) << endl;
         itr++;
     }
-
-
-
-
+    return 0;
 }
