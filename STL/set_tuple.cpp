@@ -15,7 +15,7 @@ int main() {
 	//要素自身がキーであり、重複を許さず、追加するたびにソートされることを確認
 	s.insert(T(4,2,5));
 	s.emplace(3,3,3);
-	s.emplace(3,2,3);
+	s.emplace(3,2,4);
 	s.emplace(1,2,1);
 	s.emplace(3,2,3);//要素が重複するので追加されない
 
@@ -32,7 +32,7 @@ int main() {
 	for(auto &p:s){//&無くても動いた
 		cout << get<0>(p) << ","<< get<1>(p) << ","<< get<2>(p) << endl;
 		cout << typeid(p).name() << endl;
-		cout << typeid(*p).name() << endl;
+		//cout << typeid(*p).name() << endl; errorになる
 	}
 	cout << endl;
 	//出力	//1,2　//3,2　//3,3　//4,2 //4,0

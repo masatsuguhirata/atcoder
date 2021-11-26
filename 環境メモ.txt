@@ -1,0 +1,42 @@
+# 便利キー
+### テキスト入力系
+コード整形	：	Shift + alt + f
+vim矩形操作	：	Ctrl+V,I,
+コメントアウト On/Off : Ctrl + / ※複数行まとめて操作可能
+
+### テキスト操作
+
+### VScode
+コンパイル	：	Ctrl+Shift+B
+ターミナル	：	Ctrl+Shift+@
+インライン	：	Ctrl+Shift+P
+デバッガ起動：	F5	※problem.inに標準入力を設定
+
+### デバッグ手順
+注意事項：ソースコードのコンパイル最適化オプションをはずさないと動かなかった
+1.ctrl+shift+bでコンパイルする。ploblem.exeが生成される
+2.F5でデバッグ。ploblem.inに入力した値が、argとして入る
+
+
+### ツール
+ohmyzsh
+	イケてるターミナルをコマンド1つで作れるoh-my-zsh!gitのブランチ名だって表示できる!
+	https://nishinatoshiharu.com/install-ohmyzsh/
+	ターミナルの表示や、gitの未更新など見やすくする（更新が古く、設定のブラックボックスなど、デメリットもあるようだ
+
+# 環境設定参考
+【VScode＋WSLで始める】競プロ用C++デバッグ環境構築
+https://qiita.com/2019Shun/items/5ab290a4117a00e373b6#%E3%83%87%E3%83%90%E3%83%83%E3%82%B0%E7%92%B0%E5%A2%83%E6%A7%8B%E7%AF%89
+
+
+WSLのWindowsのフォルダの色が見づらいのを直す
+https://www.kwbtblog.com/entry/2019/04/27/023411
+※oh-my-zshをいれているためか、.bashrcではなく、.zshrcで.dircolorsを読みこむように設定するとうまくいった。
+
+### 小技
+vim 矩形挿入
+	矩形選択をするため、ctrl＋vキーを押下する。（ ...
+	挿入したい行数分、↑キーor↓キーで範囲を指定する。
+	挿入モードになるため、Shift＋iキーを押下する。（ ...
+	挿入したい文字を入力した後、ESCキーを押下する。
+
