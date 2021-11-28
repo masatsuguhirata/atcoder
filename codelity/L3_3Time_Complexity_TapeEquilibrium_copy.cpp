@@ -9,48 +9,46 @@ using namespace std;
 using ll = long long;
 using P = pair<int, int>;
 
-// #include <limits>
-// #include <cmath>
+
+//A[i]の範囲がマイナスを含むため、「sumを分割してその前後のP1,P2の2点においてのmindifを求める」は全体最小値にはならない可能性があるためNG。本スクリプトの回答は間違いである。
 
 int solution(vector<int> &A) {
-    vector<long long> sums;
-    unsigned int N = A.size();
+	ll sum = 0;
+	ll ans;
 
-    long long sum = 0;
-    // generate all of the possible sums
-    for (unsigned int i=0; i<N; i++) {
-      sum += A[i];
-      sums.push_back(sum);
-    }
+	for(int i = 0;i<A.size();i++){
+		sum+=A[i];
+	}
 
-    // figure out which difference is the smallest
-    //long long minDiff;
-    long long minDiff = std::numeric_limits<long long>::max();//mindiffを可能な限りでかい値をいれておく
+	ll sumofarray=sum;
+	double tmp=sum/2.0;
+	ll p1,p2;
+	ll tmp1,tmp2;
+	tmp1=floor(tmp);
+	tmp2=ceil(tmp);
+	ll defference,mindefference=10000;
 
-    // Can't do the entire array, have to stop at one less than the max
-    for (unsigned int i=0; i<(N-1); i++) {
-        // Simplifying this:
-        // sums[i] - (sums[i] - sum) = 2*sums[i]-sum;
+	sum=0;
 
-        long long diff = abs( 2*sums[i] - sum );
-        if ( diff < minDiff ) {
-            minDiff = diff;
-        }
+	for(int i = 0;i<A.size();i++){
+		sum+=A[i];
 
-    }
-
-    return minDiff;
+		if (i==p1 || i==p2){
+		 	defference=abs(sumofarray-2*sum);
+			if (defference < mindefference){
+				mindefference = defference;
+			}
+		}
+		return mindefference;
+		// if(sum >= tmp){
+		// 	defference=abs(sumofarray-2*sum);
+		// }
+	}
 }
 
-
-
-
-
-
 int main(){
-	vector<int> B={9,3,9,3,9,7,9};
-	assert(B[1]==3);
-	assert(B[2]==3);
+	vector<int> B={3,1,2,4,3};
+	//vector<int> B={3,1,2,4,4,7,9};
 	cout << solution(B) << endl;
 	return 0;
 }

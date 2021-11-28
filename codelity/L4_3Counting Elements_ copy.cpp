@@ -1,4 +1,4 @@
-//回答url:
+//url:
 //
 // Task Score: 100%
 // Correctness: 100%
@@ -8,7 +8,6 @@
 #pragma GCC target("avx2")
 #pragma GCC optimize("O3")
 #pragma GCC optimize("unroll-loops")
-//#define _GLIBCXX_DEBUG//配列外参照のデバッグ用
 
 #include <bits/stdc++.h>
 #define rep(i, n) for (int i = 0; i < (n); ++i)
@@ -17,15 +16,18 @@ using namespace std;
 using ll = long long;
 using P = pair<int, int>;
 
+//1<= int N,M <=10^5 intN=0
+//1<= int a[i] <= N+1  i<M; A non-empty array A of M integers
+// 
 
-int solution(vector<int> &A) {
+vector<int> solution(int N, vector<int> &A){
+
 }
 
 int main(){
-	vector<int> B={9,3,9,3,9,7,9};
-	cout << solution(B) << endl;
+	vector<int> B={1,3,1,4,2,3,5,4};
+	cout << solution(5,B) << endl;
+	vector<int> c={1,3,1,4,2,3,4};
+	cout << solution(5,c) << endl;
 	return 0;
 }
-
-
-//問題文
