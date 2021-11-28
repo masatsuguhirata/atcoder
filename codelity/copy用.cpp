@@ -5,10 +5,10 @@
 // Performance: 100%
 //Detected time complexity:
 
-#pragma GCC target("avx2")
-#pragma GCC optimize("O3")
-#pragma GCC optimize("unroll-loops")
-//#define _GLIBCXX_DEBUG//配列外参照のデバッグ用
+// #pragma GCC target("avx2")
+// #pragma GCC optimize("O3")
+// #pragma GCC optimize("unroll-loops")
+#define _GLIBCXX_DEBUG//配列外参照のデバッグ用
 
 #include <bits/stdc++.h>
 #define rep(i, n) for (int i = 0; i < (n); ++i)

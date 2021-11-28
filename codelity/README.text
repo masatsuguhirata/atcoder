@@ -1,0 +1,11 @@
+# ファイル名の説明
+- ファイル名の末尾に何もない
+	- 提出用
+- ファイル名の末尾に数値
+	- 出来の悪かったコード / 古いものほど番号が高くなる
+- ファイル名の末尾にsample
+	-どこかのgitから引っ張ってきたもの / コードの改良参考に
+
+# 参考にしたサイト
+コメントが丁寧：https://github.com/markhary/codility/tree/master/src
+書き方がやさしい：https://github.com/Behrouz-m/Codility
