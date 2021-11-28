@@ -9,3 +9,4 @@
 # 参考にしたサイト
 コメントが丁寧：https://github.com/markhary/codility/tree/master/src
 書き方がやさしい：https://github.com/Behrouz-m/Codility
+algorithm確認用:https://www.youtube.com/c/CodeTradingCafe/about
