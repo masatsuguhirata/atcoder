@@ -1,13 +1,13 @@
-//回答url:
+//回答url:https://app.codility.com/demo/results/trainingD5SUH2-VPC/
 //
 // Task Score: 100%
 // Correctness: 100%
 // Performance: 100%
 //Detected time complexity:
 
-#pragma GCC target("avx2")
-#pragma GCC optimize("O3")
-#pragma GCC optimize("unroll-loops")
+// #pragma GCC target("avx2")
+// #pragma GCC optimize("O3")
+// #pragma GCC optimize("unroll-loops")
 // #define _GLIBCXX_DEBUG//配列外参照のデバッグ用
 
 #include <bits/stdc++.h>
@@ -40,7 +40,10 @@ int solution(vector<int> &A) {
 	}
 	for (int i=0; i<A.size()-1; i++){
 		float v2 = (float)(A[i]+A[i+1])/2.0;
-		if(min > v2) {
+		//計算中の値が、（3平均のmin, miが0, 100で、2平均のmin,miが0,10の時など）最小値は同じだが、最小となるインデックスが異なる場合に事象が発生する。
+		//・不正解コードだと、3平均だけを扱った場合にmi(最小のインデックス)が100で更新され、2平均のmiの10で更新されるべき箇所が、最小値が同じ0であるため更新されずにバグとなる。
+		//if(min > v1) {//子のロジックだとNG、「3平均のmin, miが0, 100で、2平均のmin,miが0,10の時とか」に問題アリ
+		if(((min==v2) && (mi>i)) || (min > v2)) { //NG:このロジックに要注意https://teratail.com/questions/371592?whotofollow=
 			min=v2;
 			mi=i;
 		}

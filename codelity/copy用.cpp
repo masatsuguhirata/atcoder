@@ -22,8 +22,8 @@ int solution(vector<int> &A) {
 }
 
 int main(){
-	vector<int> B={9,3,9,3,9,7,9};
-	cout << solution(B) << endl;
+	{vector<int> B={9,3,9,3,9,7,9};
+	cout << solution(B) << endl;}
 	return 0;
 }
 
