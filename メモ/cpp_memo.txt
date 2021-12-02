@@ -1,2 +1,17 @@
 ## 良く調べているサイトがあったはず
 
+# STL
+
+- mindiffに可能な限りでかい定数をいれる
+	- long long minDiff = std::numeric_limits<long long>::max();
+
+# 型
+- long long : long long int のこと
+
+- vector http://vivi.dyndns.org/tech/cpp/vector.html#decl
+	- 初期化
+		-   std::vector<int> data(10, 5);      //  要素数10、全ての要素の値5 で初期化
+
+
+- 数値リテラルの桁区切り文字
+	- int price = 1'000'000; // 100万円
